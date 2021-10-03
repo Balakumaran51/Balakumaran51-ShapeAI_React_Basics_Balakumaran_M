@@ -2,14 +2,15 @@ import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/sty
 import {Typography} from '@material-ui/core'; 
 import NavBar from './components/NavBar'
 import Grid from './components/Grid'
+import Footer from './components/Footer';
 import './App.css';
 import DescriptionRoundedIcon from '@material-ui/icons/DescriptionRounded';
 import DesktopMacRoundedIcon from '@material-ui/icons/DesktopMacRounded';
 import InsertChartOutlinedIcon from '@material-ui/icons/InsertChartOutlined';
 import {BrowserRouter as Router, Route ,Switch,NavLink } from 'react-router-dom';
-import Resume from './components/Resume'
-import Projects from './components/Projects'
-import Skills from './components/Skills'
+import Resume from './components/Resume';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
 
 const theme = createMuiTheme({
   palette: {
@@ -90,6 +91,9 @@ function App() {
           </Route>
           <Route path="/Skills">
             <Skills />
+          </Route>
+          <Route path="/Footer">
+            <Footer />
           </Route>
         </Switch>
         </div>
