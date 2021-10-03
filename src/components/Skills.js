@@ -43,23 +43,37 @@ const styles = makeStyles({
     big:{
         width:"65%",
         height:"30px",
-        background:"rgb(15,15,15,0.7)"
+        background:"rgb(15,15,15,0.5)"
     },
     small:{
         width:"40%",
         height:"30px",
-        background:"rgb(15,15,15,0.7)"
+        background:"rgb(15,15,15,0.5)"
     },
     start:{
+        "&:hover": {
+        background:"orange"
+          },
+        "&:clicked":{
+            background:"orange"
+        },
+          transition: "background .3s",
+        background:"rgb(15,15,15,0.5)",
         width:"35%",
         height:"30px",
-        background:"orange",
         alignContent:"right"
     },
     mid:{
         width:"60%",
         height:"30px",
-        background:"green",
+        "&:hover":{
+            background:"green",
+        },
+        "&:clicked":{
+            background:"green",
+        },
+        transition: "background .3s",
+        background:"rgb(15,15,15,0.5)",
         alignContent:"right"
     },
     skills:{
