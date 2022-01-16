@@ -1,5 +1,4 @@
 import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
-import {Typography} from '@material-ui/core'; 
 import NavBar from './components/NavBar'
 import Grid from './components/Grid'
 import Footer from './components/Footer';
@@ -11,6 +10,7 @@ import {BrowserRouter as Router, Route ,Switch,NavLink } from 'react-router-dom'
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import About from './components/About';
 
 const theme = createMuiTheme({
   palette: {
@@ -51,6 +51,8 @@ const styles = makeStyles({
   },
   littleSpace:{
     marginTop: "2.5rem",
+    textAlign:"justify",
+    margin:"0 auto",
   },
   grid:{
     display: "flex", 
@@ -68,14 +70,6 @@ function App() {
     <div className="App">
         <ThemeProvider theme={theme}>
         <NavBar/>
-        <div className={classes.wrapper}>
-          <Typography variant="h4" className={classes.bigSpace} color="primary">
-            My first Portfolio website made using react (frontend-library) 
-          </Typography>
-          <Typography variant="h5" className={classes.littleSpace} color="primary">
-          Hello! My Name is Balakumaran a college student and I'm striving to become the best full stack web developer. Currently I am working on projects with python and flutter. On my own, I am learning React, machine learning with python. I am great at learning on my own which is very important for software engineers.I promise to deliver quality work throughout the tenure of the internship or any work I progress through .Thanks for visiting my website feel free to visit my linkedIn and github profile.  
-          </Typography>
-        </div>
         <div className={`${classes.grid} ${classes.bigSpace}`}>
         <NavLink to='Resume'><Grid icon={<DescriptionRoundedIcon style={{fill: "#4360A6", height:"125", width:"125"}}/>}  btnTitle="Resume" /></NavLink>
         <NavLink to='Projects'><Grid icon={<DesktopMacRoundedIcon style={{fill: "#449A76", height:"125", width:"125"}}/>}  btnTitle="Projects"/></NavLink>
@@ -83,7 +77,10 @@ function App() {
         </div>
         <div className={classes.bigSpace}>
         <Switch>
-          <Route exact path="/Resume">
+        <Route exact path="/About">
+        <About/>
+        </Route>
+          <Route path="/Resume">
             <Resume />
           </Route>
           <Route path="/Projects">
