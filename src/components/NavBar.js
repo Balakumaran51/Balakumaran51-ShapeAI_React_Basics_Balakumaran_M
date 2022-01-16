@@ -1,7 +1,7 @@
 import React from 'react'
 import {Toolbar, Typography} from '@material-ui/core';
 import {makeStyles} from "@material-ui/core/styles";
-import  {BrowserRouter as Router, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Link}  from 'react-router-dom';
 
 const styles = makeStyles({
     bar:{
@@ -34,7 +34,9 @@ const styles = makeStyles({
     return (
             <Toolbar position="left" color="rgba(0, 0, 0, 0.87)" className={classes.bar}> 
                 <Typography variant="h6" className={classes.menuItem}>
+                <Link to='About' className={classes.dec}>   
                 About Me
+                </Link>
                 </Typography>
                 <Typography variant="h6" className={classes.menuItem}>
                 <Link to='Resume' className={classes.dec}>   
