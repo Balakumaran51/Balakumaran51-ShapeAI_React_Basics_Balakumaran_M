@@ -51,14 +51,7 @@ const styles = makeStyles({
         background:"rgb(15,15,15,0.5)"
     },
     start:{
-        "&:hover": {
-        background:"orange"
-          },
-        "&:clicked":{
-            background:"orange"
-        },
-          transition: "background .3s",
-        background:"rgb(15,15,15,0.5)",
+        background:"orange",
         width:"35%",
         height:"30px",
         alignContent:"right"
@@ -66,14 +59,7 @@ const styles = makeStyles({
     mid:{
         width:"60%",
         height:"30px",
-        "&:hover":{
-            background:"green",
-        },
-        "&:clicked":{
-            background:"green",
-        },
-        transition: "background .3s",
-        background:"rgb(15,15,15,0.5)",
+        background:"green",
         alignContent:"right"
     },
     skills:{
@@ -97,11 +83,31 @@ return (
         <br/>
         <p>Flutter: Beginner<div className={classes.alignment}><div className={classes.start}></div><div className={classes.big}></div></div></p>
         <br/>
-        <p>ReactJS: Beginner<div className={classes.alignment}><div className={classes.start}></div><div className={classes.big}></div></div></p>
+        <p>ReactJS: Beginner
+        <div className={classes.alignment}>
+        <div className={classes.start}>
+        </div>
+        <div className={classes.big}>
+        </div>
+        </div>
+        </p>
         <br/>
-        <p>HTML: Intermediate<div className={classes.alignment}><div className={classes.mid}></div><div className={classes.small}></div></div></p>
+        <p>HTML: Intermediate
+        <div className={classes.alignment}>
+        <div className={classes.mid}>
+        </div>
+        <div className={classes.small}>
+        </div>
+        </div>
+        </p>
         <br/>
-        <p>CSS: Intermediate<div className={classes.alignment}><div className={classes.mid}></div><div className={classes.small}></div></div></p>
+        <p>CSS: Intermediate
+        <div className={classes.alignment}>
+        <div className={classes.mid}>
+        </div><div className={classes.small}>
+        </div>
+        </div>
+        </p>
         </Typography>
         <hr/>
         <Footer/>
