@@ -61,7 +61,7 @@ return (
 
     <div className={classes.content}>
     <h3>EDUCATION</h3>	
-    <h3>Business Engineering (BE), Electronics and Communication</h3>
+    <h3>Bachelor of Engineering (BE), Electronics and Communication</h3>
     <p>St Joseph's College Of Engineering (2019 - 2023)</p>
     <p>CGPA: 8.66/10</p>
 
